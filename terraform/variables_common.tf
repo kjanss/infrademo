@@ -3,6 +3,25 @@ variable "myRG" {
   default = "RG-TEST"
 }
 
+variable "demo_defaults" {
+  type = map
+  default = {
+    location = "westeurope"
+    rgname   = "RG-TEST"
+  }
+}
+
+variable "demo_vmdefaults" {
+  type = map
+  default = {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
+    version   = "latest"
+    sshkey    = "~/.ssh/id_rsa.pub"
+
+  }
+}
 variable "myVnet" {
   type = map
   default = {
@@ -34,5 +53,13 @@ variable "mySubNetVM" {
   default = {
     "name"           = "sn-vm-01"
     "address_prefix" = "172.20.30.0/24"
+  }
+}
+
+variable "myVM-01" {
+  type = map
+  default = {
+    "name"   = "vm-01"
+    "size"   = "Standard_B2s"
   }
 }
