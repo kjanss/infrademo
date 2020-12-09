@@ -4,7 +4,7 @@ variable "myRG" {
 }
 
 variable "demo_defaults" {
-  type = map
+  type = map(any)
   default = {
     location = "westeurope"
     rgname   = "RG-TEST"
@@ -12,7 +12,7 @@ variable "demo_defaults" {
 }
 
 variable "demo_vmdefaults" {
-  type = map
+  type = map(any)
   default = {
     publisher = "Canonical"
     offer     = "UbuntuServer"
@@ -23,7 +23,7 @@ variable "demo_vmdefaults" {
   }
 }
 variable "myVnet" {
-  type = map
+  type = map(any)
   default = {
     "name"          = "VNET-INFRADEMO"
     "location"      = "westeurope"
@@ -33,7 +33,7 @@ variable "myVnet" {
 }
 
 variable "mySubNetMgmt" {
-  type = map
+  type = map(any)
   default = {
     "name"           = "sn-mgmt-01"
     "address_prefix" = "172.20.10.0/24"
@@ -41,7 +41,7 @@ variable "mySubNetMgmt" {
 }
 
 variable "mySubNetAKS" {
-  type = map
+  type = map(any)
   default = {
     "name"           = "sn-aks-01"
     "address_prefix" = "172.20.20.0/24"
@@ -49,7 +49,7 @@ variable "mySubNetAKS" {
 }
 
 variable "mySubNetVM" {
-  type = map
+  type = map(any)
   default = {
     "name"           = "sn-vm-01"
     "address_prefix" = "172.20.30.0/24"
@@ -57,9 +57,9 @@ variable "mySubNetVM" {
 }
 
 variable "myVM-01" {
-  type = map
+  type = map(any)
   default = {
-    "name"   = "vm-01"
-    "size"   = "Standard_B2s"
+    "name" = "vm-01"
+    "size" = "Standard_B2s"
   }
 }
