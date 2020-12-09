@@ -1,3 +1,3 @@
 data "azurerm_resource_group" "tg-test" {
-  name = var.myRG
+  name = var.demo_defaults.rgname
 }
