@@ -59,7 +59,17 @@ variable "mySubNetVM" {
 variable "myVM-01" {
   type = map(any)
   default = {
-    "name" = "vm-01"
-    "size" = "Standard_B2s"
+    "name"  = "vm-01"
+    "size"  = "Standard_B2s"
+    "count" = "3"
+  }
+}
+
+variable "mgmt-01" {
+  type = map(any)
+  default = {
+    "name"  = "mgmt-01"
+    "size"  = "Standard_B2s"
+    "count" = "1"
   }
 }

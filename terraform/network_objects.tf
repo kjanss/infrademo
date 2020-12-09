@@ -26,3 +26,9 @@ resource "azurerm_subnet" "aksnet" {
   virtual_network_name = azurerm_virtual_network.myvnet.name
 }
 
+resource "azurerm_public_ip" "mgmtip" {
+  name                = "mgmtip"
+  resource_group_name = var.demo_defaults.rgname
+  location            = var.demo_defaults.location
+  allocation_method   = "Dynamic"
+}
