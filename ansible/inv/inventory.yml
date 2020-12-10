@@ -1,0 +1,17 @@
+[vmdemo]
+vm-01-0  ansible_ssh_host=172.20.30.6
+vm-01-1  ansible_ssh_host=172.20.30.5
+vm-01-2  ansible_ssh_host=172.20.30.4
+
+[py3hosts:children]
+vmdemo
+
+[py3hosts:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[ubuntuvm:children]
+vmdemo
+
+[docker]
+vm-01-0
+vm-01-1

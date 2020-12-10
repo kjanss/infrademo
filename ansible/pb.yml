@@ -1,6 +1,12 @@
-- hosts: all
+- hosts: ubuntuvm 
   roles:
   - common
   tags:
   - common
   gather_facts: true
+
+- hosts: docker
+  roles:
+  - docker
+  tags:
+  - docker
