@@ -1,0 +1,29 @@
+---
+# tasks file for docker
+
+
+- name: Add docker repo apt key 
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+  become: yes
+  
+- name: Add  docker apt repo
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable 
+    state: present
+  become: yes
+
+- name: Install docker packages for ubuntu 
+  apt:
+    name: "{{ docker_pkg }}"
+    state: present
+    cache_valid_time: 28800
+  become: yes
+
+- name: Start service docker, if not started
+  service:
+    name: docker 
+    state: started
+    enabled: yes
+  become: yes
+

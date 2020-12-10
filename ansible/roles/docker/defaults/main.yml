@@ -1,0 +1,6 @@
+---
+# defaults file for docker
+docker_pkg:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
