@@ -1,2 +1,5 @@
 ---
 # defaults file for common
+apt_pkg:
+  - python3
+  
