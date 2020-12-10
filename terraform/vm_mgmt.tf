@@ -32,7 +32,7 @@ resource "azurerm_linux_virtual_machine" "mgmt-01" {
   }
 
   boot_diagnostics {
-    
+
   }
   source_image_reference {
     publisher = var.demo_vmdefaults.publisher
