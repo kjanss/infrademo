@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "nic-vm-01" {
   location            = var.demo_defaults.location
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.mgmtnet.id
+    subnet_id                     = azurerm_subnet.vmnet.id
     private_ip_address_allocation = "Dynamic"
   }
 }
