@@ -1,0 +1,4 @@
+[vmdemo]
+vm-01-0  ansible_ssh_host=172.20.30.6
+vm-01-1  ansible_ssh_host=172.20.30.7
+vm-01-2  ansible_ssh_host=172.20.30.8
