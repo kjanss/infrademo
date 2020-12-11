@@ -1,8 +1,10 @@
 # infrademo
 
 ## you need:
-- git cli and a code repository storage machanism (eg github)
-- a decent editor, ideally supporting version control
+- git:
+  - git cli and a code repository storage machanism (eg github)
+  - sourcetree (optional) to visualize git operations
+- a decent editor, ideally supporting version control (eg vscode)
 - a password management mechanism, web and cloud services center around bearer tokens, oidc and secrets.
 - a secrets management mechanism, eg azure keyvault / hashicorp vault
 - a cloud provider, forget on-prem
