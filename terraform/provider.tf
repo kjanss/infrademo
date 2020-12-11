@@ -1,5 +1,5 @@
 provider "azurerm" {
-  subscription_id = "***REMOVED***"
+  subscription_id = "XYZ" # use az account list -o table
   features {}
   skip_provider_registration = true
 }
